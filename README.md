@@ -1,69 +1,118 @@
-# React + TypeScript + Vite
+# BondPredict - Corporate Bond Market Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A decentralized platform for creating and managing corporate bonds built on the **Aptos blockchain** using **Move smart contracts**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- **On-chain Bond Markets**: Create and manage corporate bonds securely  
+- **Smart Contract Integration**: Automated bond creation and management  
+- **Petra Wallet Integration**: Seamless wallet connection and transaction management  
+- **Real-time Bond Data**: Live issuance and activity tracking  
+- **Responsive Design**: Optimized for desktop and mobile devices  
+- **Professional UI/UX**: Financial-grade interface with clean data visualization  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠 Technology Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Frontend**: React 18, TypeScript, Tailwind CSS  
+- **Icons**: Lucide React  
+- **Routing**: React Router DOM  
+- **Blockchain**: Aptos, Move Smart Contracts  
+- **Wallet**: Petra Wallet Integration  
+- **Build Tool**: Vite  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 📋 Prerequisites
+
+- Node.js 16+  
+- [Petra Wallet](https://petra.app/) browser extension  
+- Basic understanding of cryptocurrency and the Aptos blockchain  
+
+---
+
+## 🔧 Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies:
+```bash
+npm install
 ```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## 🎯 Core Functionality
+
+### Home Page
+- Platform overview and statistics
+- Featured bond listings
+- Key performance metrics
+
+### Markets
+- Browse all available bonds
+- Filter, search, and sort
+- View issuance details and metadata
+
+### Bond Detail
+- Comprehensive bond information
+- Issuer details and external resources
+- View recent activity
+
+### Create Bond
+- Create new corporate bonds on-chain
+- Set bond parameters and deadlines
+- Bond information input (issuer, amount, rate, duration)
+- Market creation fee (0.1 APT)
+
+## 📊 Smart Contract Features
+
+### Bond Creation
+- Companies and bond identification
+- Prediction questions and deadlines
+- Automated pool management
+
+## 🔐 Security Features
+
+- Smart contract validation (Move language)
+- Secure wallet integration (Petra)
+- Input sanitization
+- Error handling and user feedback
+
+## 🚀 Deployment
+
+### Frontend Deployment
+```bash
+npm run build
+```
+
+Deploy the `dist` folder to your preferred hosting service (Netlify, Vercel, etc.).
+
+### Smart Contract Deployment
+
+1. Compile the Move contract:
+```bash
+aptos move compile
+```
+
+2. Deploy to Aptos testnet:
+```bash
+aptos move publish --package-dir <your-package-path> --profile default
+```
+
+3. Update contract address in `src/utils/aptos.ts`
+
+---
+
+Built with ❤️ for the future of decentralized finance.# corporate_bond
